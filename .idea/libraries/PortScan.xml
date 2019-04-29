@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PortScan">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Downloads/端口扫描器的设计与实现/PortScan.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
