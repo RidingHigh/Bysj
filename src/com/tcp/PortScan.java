@@ -83,7 +83,7 @@ public class PortScan{
 
     public static void main(String[] args){
 
-        main.setSize(500,400);
+        main.setSize(900,500);
         main.setLocation(260,180);
         main.setResizable(false);
         main.setLayout(new GridBagLayout());
