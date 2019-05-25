@@ -47,7 +47,10 @@ public class TCPThread extends Thread{
         //根据ip地址进行扫描
         if(type == 0){
             //不同的端口循环扫描
-            for (i = MIN_port+threadnum; i < MAX_port + Integer.parseInt(PortScan.maxThread.getText()) && PortScan.StopFlag; i += Integer.parseInt(PortScan.maxThread.getText())){
+            for (i = MIN_port+threadnum;
+                 i < MAX_port + Integer.parseInt(PortScan.maxThread.getText()) && PortScan.StopFlag;
+                 i += Integer.parseInt(PortScan.maxThread.getText()))
+            {
 
                 try{
                     theTCPsocket=new Socket(hostAddress,i);
@@ -57,6 +60,9 @@ public class TCPThread extends Thread{
                     switch(i){
                         case 21:
                             porttype = "(FTP)";
+                            break;
+                        case 22:
+                            porttype = "(SSH)";
                             break;
                         case 23:
                             porttype = "(TELNET)";
@@ -108,7 +114,7 @@ public class TCPThread extends Thread{
                     }
                 }
             }
-            //}
+
 
             //扫描完成后，显示扫描完成，并将“确定”按钮设置为可用
             if (i==MAX_port+Integer.parseInt(PortScan.maxThread.getText())){
@@ -125,7 +131,9 @@ public class TCPThread extends Thread{
         //按照主机名进行端口扫描
         if(type == 1){
 
-            for (i = MIN_port+threadnum; i < MAX_port+Integer.parseInt(PortScan.maxThread.getText()) && PortScan.StopFlag; i += Integer.parseInt(PortScan.maxThread.getText())){
+            for (i = MIN_port+threadnum;
+                 i < MAX_port+Integer.parseInt(PortScan.maxThread.getText()) && PortScan.StopFlag;
+                 i += Integer.parseInt(PortScan.maxThread.getText())){
 
                 try{
                     theTCPsocket=new Socket(hostAddress,i);
@@ -133,6 +141,9 @@ public class TCPThread extends Thread{
                     switch(i){
                         case 21:
                             porttype = "(FTP)";
+                            break;
+                        case 22:
+                            porttype = "(SSH)";
                             break;
                         case 23:
                             porttype = "(TELNET)";
@@ -188,7 +199,7 @@ public class TCPThread extends Thread{
             //扫描完成后，显示扫描完成，并将【确定】按钮设置为可用
             if (i==MAX_port+Integer.parseInt(PortScan.maxThread.getText())){
                 try {Thread.sleep(1000);} catch (InterruptedException e) {}
-                PortScan.Result.append("扫描完成...");
+               PortScan.Result.append("扫描完成...");
 
                 //将【确定】按钮设置成为可用
                 if(!PortScan.Submit.isEnabled()){

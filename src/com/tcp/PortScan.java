@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 public class PortScan{
 
-    public static JFrame main=new JFrame("毕业设计扫描器");
+    public static JFrame main=new JFrame("20151681310212周光臻毕业设计扫描器");
     //显示扫描结果
     public static JTextArea Result=new JTextArea("",10,30);
     public static JTextArea ResultAll=new JTextArea("",10,30);
@@ -58,7 +58,7 @@ public class PortScan{
     public static JLabel Pdot1 = new JLabel(".");
     public static JLabel Pdot2 = new JLabel(".");
     public static JLabel Pdot3 = new JLabel(".");
-    public static JLabel TNUM=new JLabel("  线    程   数:",JLabel.LEADING);
+    public static JLabel TNUM=new JLabel("  线   程   数:",JLabel.LEADING);
     public static JLabel RSTAll=new JLabel("扫描所有端口:                                       ");
     public static JLabel RST=new JLabel("所有开放端口:                                       ");
     public static JLabel con=new JLabel("                                                                                                              ");
